@@ -54,6 +54,7 @@
     "gulp-util": "^3.0.1",
     "jshint-stylish": "^0.4.0",
     "main-bower-files": "^2.0.0",
+    "node-sass": "^2.0.1",
     "pretty-hrtime": "^0.2.1",
     "require-dir": "^0.1.0",
     "rimraf": "^2.2.8",
@@ -61,6 +62,5 @@
     "vinyl-source-stream": "^0.1.1",
     "watchify": "^1.0.2"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
