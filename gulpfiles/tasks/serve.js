@@ -7,6 +7,7 @@ var gulp = require('gulp'),
 gulp.task('browser-sync', ['build'], function() {
     'use strict';
     browserSync.init(['build/**'], {
+        port: 3005,
         server: {
             baseDir: ['build']
         }
@@ -16,6 +17,7 @@ gulp.task('browser-sync', ['build'], function() {
 gulp.task('browser-sync-dist', ['dist'], function() {
     'use strict';
     browserSync.init(['dist/**'], {
+        port: 3006,
         server: {
             baseDir: ['dist']
         }
