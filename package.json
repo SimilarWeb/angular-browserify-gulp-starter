@@ -20,7 +20,7 @@
     "famous"
   ],
   "author": "bguiz",
-  "license": "GPLv3",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/bguiz/browserify-gulp-starter/issues"
   },
