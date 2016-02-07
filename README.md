@@ -12,6 +12,10 @@ Starter project that builds web apps using browserify and gulp
 
 ## How to start
 
+### Prerequisites: 
+Running Windows? This project uses BrowserSync which requires Visual Studio to be installed:
+https://www.browsersync.io/docs/#windows-users
+
 ### Bootstrap your framework
 
 Install nodejs http://nodejs.org/
