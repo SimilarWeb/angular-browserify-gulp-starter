@@ -52,6 +52,7 @@
     "gulp-streamify": "*",
     "gulp-uglify": "*",
     "gulp-util": "*",
+    "jshint": "*",
     "jshint-stylish": "*",
     "lodash": "*",
     "main-bower-files": "*",
