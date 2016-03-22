@@ -1,7 +1,7 @@
-<div class="photos-page" ng-controller="SearchCtrl as ctrl">
+<div class="photos-page">
     <p>{{ctrl.displayText}}</p>
 
-    <form ng-submit="ctrl.search()">
+    <form ng-submit="ctrl.changeTag()">
         <input class="tags-input" ng-model="ctrl.tags"/>
         <input class="search-submit" type="submit" value="go"/>
     </form>

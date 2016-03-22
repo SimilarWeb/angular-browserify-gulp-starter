@@ -1,16 +1,17 @@
 /* @ngInject */
-module.exports = function SearchCtrl($http, $route, FlickrService) {
+module.exports = function SearchCtrl($state, FlickrService) {
     'use strict';
-    var vm = this;
-    vm.displayText = 'Flickr Photos';
-    vm.tags = $route.current.params.tag;
-    vm.size = 'm';
+    var ctrl = this;
+    ctrl.displayText = 'Flickr Photos';
+    ctrl.tags = $state.params.tag;
+    ctrl.size = 'm';
 
-    vm.search = function () {
-        FlickrService.search({ tags: vm.tags }, function (data) {
-            vm.photos = data.photos.photo;
-        });
+    FlickrService.search({ tags: ctrl.tags }, function (data) {
+        ctrl.photos = data.photos.photo;
+    });
+
+    ctrl.changeTag = function () {
+        $state.go('search', { tag: ctrl.tags });
     };
 
-    vm.search();
 };

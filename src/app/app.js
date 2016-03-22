@@ -1,21 +1,27 @@
 /*globals angular*/
 
 var app = angular.module('app', [
-    'ngRoute',
+    'ui.router',
     'ngResource'
 ]);
 
-app.config(function($routeProvider) {
+app.config(function ($stateProvider, $urlRouterProvider) {
     'use strict';
-    $routeProvider.when('/search/:tag', {
-        templateUrl: 'search.html'
-    })
-    .otherwise({
-        redirectTo: '/search/forest'
-    });
+
+    // Set up the states
+    $stateProvider
+        .state('search', {
+            url: "/search/:tag",
+            templateUrl: "search.html",
+            controller: 'SearchCtrl as ctrl'
+        });
+
+    // For any unmatched url
+    $urlRouterProvider.otherwise("/search/forest");
+
 });
 
-app.constant('FlickrApiKey', function() {
+app.constant('FlickrApiKey', function () {
     'use strict';
     return '197e87889cad7c709f54b583d9690a4f';
 });
